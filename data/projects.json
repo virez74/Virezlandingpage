@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "title": "Jeff's Glimpse",
+    "category": "Portfolio",
+    "description": "Hey My 1st ever site was for my good friend Jeffry.",
+    "cover": "/images/jeff.png",
+    "url": "https://jeff-glimpse.netlify.app/"
+  },
+  {
+    "id": "2",
+    "title": "Vireztech",
+    "category": "Project",
+    "description": "My 1st Work on Corporate website for proposal purpose .",
+    "cover": "/images/Demo.png",
+    "url": "https://vireztech.netlify.app/"
+  },
+  {
+    "id": "3",
+    "title": "Sea Salt Tracker",
+    "category": "Boardgame",
+    "description": "Inhouse Scorecard app for my Fav card game :) .",
+    "cover": "/images/sep.png",
+    "url": "https://sea-salt-paper-score.netlify.app/"
+  },
+  {
+    "id": "4",
+    "title": "Harmonies Tracker",
+    "category": "Boardgame",
+    "description": "This small tile placing board game pack an punch .",
+    "cover": "/images/har.png",
+    "url": "https://harmonies-score-tracker.netlify.app/"
+  },
+  {
+    "id": "5",
+    "title": "Open Demo",
+    "category": "Open",
+    "description": "This is a placeholder for future open-source, experimental, or community-driven projects. Add your next big idea here!",
+    "cover": "/images/de.jpg",
+    "url": "#"
+  }
+]
