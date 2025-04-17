@@ -12,7 +12,7 @@ export default function NavBar({ onLogoClick }) {
           <img
             src="/images/virez_logo.png"
             alt="Logo"
-            className="w-12 h-12 rounded-full object-cover group-hover:scale-110 transition-transform"
+            className="w-14 h-14 min-w-[3.5rem] min-h-[3.5rem] max-w-[3.5rem] max-h-[3.5rem] rounded-full object-contain group-hover:scale-110 transition-transform"
           />
         </button>
         <span className="ml-3 text-modern-purple font-cyber text-2xl tracking-widest font-bold select-none hidden sm:inline">VIREZ</span>

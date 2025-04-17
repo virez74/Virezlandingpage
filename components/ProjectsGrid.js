@@ -68,12 +68,13 @@ export default function ProjectsGrid({ projects }) {
             {(isMobile ? visibleTabs : SUBCATEGORIES).map(tab => (
               <button
                 key={tab.value}
-                className={`w-full sm:w-auto px-8 py-3 rounded-xl font-cyber text-base md:text-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-modern-purple/60 focus:ring-offset-2 focus:ring-offset-cyberpunk-dark text-black flex items-center justify-center ${selected === tab.value ? `bg-gradient-to-r ${tab.gradient}` : 'bg-modern-surface hover:bg-modern-purple/20'}`}
-                style={{ minWidth: 120, maxWidth: '100%', touchAction: 'manipulation', boxShadow: 'none', textAlign: 'center' }}
+                className={`w-full sm:w-auto px-8 py-4 rounded-xl font-cyber text-base md:text-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-modern-purple/60 focus:ring-offset-2 focus:ring-offset-cyberpunk-dark text-black flex items-center justify-center active:scale-95 ${selected === tab.value ? `bg-gradient-to-r ${tab.gradient}` : 'bg-modern-surface hover:bg-modern-purple/20'}`}
+                style={{ minWidth: 120, maxWidth: '100%', touchAction: 'manipulation', boxShadow: 'none', textAlign: 'center', WebkitTapHighlightColor: 'transparent' }}
                 onClick={() => setSelected(tab.value)}
                 aria-pressed={selected === tab.value}
+                tabIndex={0}
               >
-                <span className="w-full text-center flex items-center justify-center">{tab.label}</span>
+                <span className="w-full text-center flex items-center justify-center select-none">{tab.label}</span>
               </button>
             ))}
           </div>
