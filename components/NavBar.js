@@ -38,8 +38,8 @@ export default function NavBar({ onLogoClick }) {
       {menuOpen && (
         <>
           {/* Translucent background overlay */}
-          <div className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm z-40" onClick={() => setMenuOpen(false)}></div>
-          <div className="sm:hidden fixed top-[72px] right-2 left-2 bg-cyberpunk-dark/70 border-2 border-cyberpunk-pink rounded-xl shadow-neon p-6 flex flex-col items-center animate-fade-in z-50 backdrop-blur-md">
+          <div className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm z-40" onClick={() => setMenuOpen(false)}></div>
+          <div className="sm:hidden fixed top-[72px] right-2 left-2 bg-cyberpunk-dark/90 border-2 border-cyberpunk-pink rounded-xl shadow-neon p-6 flex flex-col items-center animate-fade-in z-50 backdrop-blur-lg">
             <a href="#about" className="w-full py-3 text-center font-cyber text-cyberpunk-yellow text-lg uppercase hover:text-cyberpunk-pink transition-colors" onClick={() => setMenuOpen(false)}>About</a>
             <a href="#projects" className="w-full py-3 text-center font-cyber text-cyberpunk-yellow text-lg uppercase hover:text-cyberpunk-pink transition-colors" onClick={() => setMenuOpen(false)}>Findings</a>
             <a href="#contact" className="w-full py-3 text-center font-cyber text-cyberpunk-yellow text-lg uppercase hover:text-cyberpunk-pink transition-colors" onClick={() => setMenuOpen(false)}>Contact</a>
