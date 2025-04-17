@@ -29,7 +29,7 @@ export default function ProjectCard({ project }) {
         href={project.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-auto inline-block px-5 py-2 neon-btn rounded-full font-cyber text-base uppercase tracking-widest shadow-neon text-cyberpunk-bg border-2 border-cyberpunk-yellow hover:border-cyberpunk-pink transition-all duration-300"
+        className="mt-auto inline-block px-5 py-2 rounded-full font-cyber text-base uppercase tracking-widest shadow-neon text-cyberpunk-bg border-2 border-cyberpunk-cyan hover:border-cyberpunk-pink transition-all duration-300 bg-cyberpunk-cyan no-underline border-0"
       >
         View Site
       </a>
