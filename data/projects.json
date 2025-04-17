@@ -2,7 +2,7 @@
   {
     "id": "1",
     "title": "Jeff's Glimpse",
-    "category": "Portfolio",
+    "category": "Project",
     "description": "Hey My 1st ever site was for my good friend Jeffry.",
     "cover": "/images/jeff.png",
     "url": "https://jeff-glimpse.netlify.app/"

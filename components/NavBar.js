@@ -20,13 +20,13 @@ export default function NavBar({ onLogoClick }) {
       </div>
       {/* Hamburger menu for mobile */}
       <button
-        className="sm:hidden flex flex-col justify-center items-center w-10 h-10 ml-auto focus:outline-none"
+        className="sm:hidden flex flex-col justify-center items-center w-10 h-10 ml-auto focus:outline-none group"
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Toggle navigation menu"
       >
-        <span className={`block w-7 h-1 bg-cyberpunk-pink rounded transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-        <span className={`block w-7 h-1 bg-cyberpunk-pink rounded my-1 transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`}></span>
-        <span className={`block w-7 h-1 bg-cyberpunk-pink rounded transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+        <span className={`block w-8 h-1 rounded-full bg-cyberpunk-pink transition-all duration-300 mb-1 ${menuOpen ? 'rotate-45 translate-y-2.5' : ''}`}></span>
+        <span className={`block w-8 h-1 rounded-full bg-cyberpunk-pink transition-all duration-300 mb-1 ${menuOpen ? 'opacity-0' : ''}`}></span>
+        <span className={`block w-8 h-1 rounded-full bg-cyberpunk-pink transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2.5' : ''}`}></span>
       </button>
       {/* Desktop nav */}
       <ul className="hidden sm:flex flex-row gap-4 sm:gap-8 font-cyber text-cyberpunk-yellow text-base uppercase ml-2 flex-shrink-0">
@@ -36,11 +36,15 @@ export default function NavBar({ onLogoClick }) {
       </ul>
       {/* Mobile menu drawer */}
       {menuOpen && (
-        <div className="sm:hidden fixed top-[72px] right-2 left-2 bg-cyberpunk-dark border-2 border-cyberpunk-pink rounded-xl shadow-neon p-6 flex flex-col items-center animate-fade-in z-50">
-          <a href="#about" className="w-full py-3 text-center font-cyber text-cyberpunk-yellow text-lg uppercase hover:text-cyberpunk-pink transition-colors" onClick={() => setMenuOpen(false)}>About</a>
-          <a href="#projects" className="w-full py-3 text-center font-cyber text-cyberpunk-yellow text-lg uppercase hover:text-cyberpunk-pink transition-colors" onClick={() => setMenuOpen(false)}>Findings</a>
-          <a href="#contact" className="w-full py-3 text-center font-cyber text-cyberpunk-yellow text-lg uppercase hover:text-cyberpunk-pink transition-colors" onClick={() => setMenuOpen(false)}>Contact</a>
-        </div>
+        <>
+          {/* Translucent background overlay */}
+          <div className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm z-40" onClick={() => setMenuOpen(false)}></div>
+          <div className="sm:hidden fixed top-[72px] right-2 left-2 bg-cyberpunk-dark/70 border-2 border-cyberpunk-pink rounded-xl shadow-neon p-6 flex flex-col items-center animate-fade-in z-50 backdrop-blur-md">
+            <a href="#about" className="w-full py-3 text-center font-cyber text-cyberpunk-yellow text-lg uppercase hover:text-cyberpunk-pink transition-colors" onClick={() => setMenuOpen(false)}>About</a>
+            <a href="#projects" className="w-full py-3 text-center font-cyber text-cyberpunk-yellow text-lg uppercase hover:text-cyberpunk-pink transition-colors" onClick={() => setMenuOpen(false)}>Findings</a>
+            <a href="#contact" className="w-full py-3 text-center font-cyber text-cyberpunk-yellow text-lg uppercase hover:text-cyberpunk-pink transition-colors" onClick={() => setMenuOpen(false)}>Contact</a>
+          </div>
+        </>
       )}
     </nav>
   );
