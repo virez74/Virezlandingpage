@@ -13,7 +13,7 @@ export default function ProjectsGrid({ projects }) {
   const [selected, setSelected] = useState('all');
   const [scrollIndex, setScrollIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-  const visibleCount = 2; // Show 2 tabs at a time on mobile
+  const visibleCount = isMobile ? 1 : 2; // Show 1 tab at a time on mobile
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 640);
